@@ -36,6 +36,7 @@ INSERT INTO expenses (detail, amount, fk_trip_id, fk_paid_tripper_id)
 VALUES ('Nafta', 5550.00, 1, 5),
        ('Nafta', 1550.00, 1, 4),
        ('Nafta', 6000.00, 1, 2),
+       ('Nafta', 2600.00, 1, 5),
        ('Senia hotel', 5000.00, 1, 1),
        ('Almacen', 3000.00, 1, 1),
        ('Nafta', 4000.00, 1, 5),
@@ -61,4 +62,10 @@ VALUES ('Nafta', 5550.00, 1, 5),
        ('Hotel Ceferino', 7500.00, 1, 2),
        ('Nafta', 2100.00, 1, 5),
        ('Nafta', 3680.00, 1, 4),
-       ('Nafta', 5500.00, 1, 5);
+       ('Nafta', 5500.00, 1, 5),
+        -- OTRO VIAJE
+       ('Hotel', 100000.00, 3, 5),
+       ('Hotel', 100000.00, 3, 2),
+       ('Hotel', 100000.00, 4, 5),
+       ('Hotel', 100000.00, 5, 2),
+       ('Hotel', 100000.00, 6, 5);

@@ -8,5 +8,5 @@ import org.springframework.stereotype.Service;
 @Service
 public interface IExpenseService {
 
-    List<ExpenseDTO> retrieveAllExpensesFromTripId(Long tripId);
+    TripDTO retrieveAllExpensesByTrip(Long tripId);
 }

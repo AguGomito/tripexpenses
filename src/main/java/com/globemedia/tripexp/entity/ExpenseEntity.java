@@ -1,6 +1,5 @@
 package com.globemedia.tripexp.entity;
 
-import java.math.BigDecimal;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -25,7 +24,7 @@ public class ExpenseEntity {
     private String detail;
 
     @NotNull
-    private BigDecimal amount;
+    private Double amount;
 
     @NotNull
     @OneToOne(fetch = FetchType.EAGER)
