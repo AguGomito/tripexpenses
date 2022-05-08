@@ -1,7 +1,8 @@
 package com.globemedia.tripexp.controller;
 
 import com.globemedia.tripexp.dto.TripDTO;
-import com.globemedia.tripexp.service.IExpenseService;
+import com.globemedia.tripexp.dto.TripExpensesDTO;
+import com.globemedia.tripexp.service.ITripExpenseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -9,14 +10,14 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class ExpenseController implements IExpenseController {
+public class TripExpenseController implements ITripExpenseController {
 
     @Autowired
-    IExpenseService expenseService;
+    ITripExpenseService tripExpenseService;
 
     @Override
-    public ResponseEntity<TripDTO> retrieveAllExpensesByTrip(HttpHeaders httpHeaders, Long tripId) {
-        return new ResponseEntity(expenseService.retrieveAllExpensesByTrip(tripId), HttpStatus.OK);
+    public ResponseEntity<TripExpensesDTO> retrieveAllExpensesByTrip(HttpHeaders httpHeaders, Long tripId) {
+        return new ResponseEntity(tripExpenseService.retrieveAllExpensesByTrip(tripId), HttpStatus.OK);
     }
 
 //    @Override

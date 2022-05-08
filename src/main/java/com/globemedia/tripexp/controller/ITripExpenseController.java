@@ -1,6 +1,7 @@
 package com.globemedia.tripexp.controller;
 
 import com.globemedia.tripexp.dto.TripDTO;
+import com.globemedia.tripexp.dto.TripExpensesDTO;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -9,11 +10,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
-public interface IExpenseController {
+public interface ITripExpenseController {
 
     @GetMapping(value = "/all_expenses_by_trip/{tripId}")
     @ResponseStatus(HttpStatus.OK)
-    ResponseEntity<TripDTO> retrieveAllExpensesByTrip(@RequestHeader HttpHeaders httpHeaders, @PathVariable Long tripId);
+    ResponseEntity<TripExpensesDTO> retrieveAllExpensesByTrip(@RequestHeader HttpHeaders httpHeaders, @PathVariable Long tripId);
 
 //    @PostMapping(value = "{trip}/{tripper}/new_expense")
 //    @ResponseStatus(HttpStatus.OK)

@@ -12,4 +12,6 @@ public class TripperDTO {
     private String name;
     private List<ExpenseDTO> expensesDTO;
     private Double expendedAmount;
+    private Double differenceAmount;
+    private Double totalEach;
 }
